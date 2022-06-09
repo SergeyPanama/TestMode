@@ -54,7 +54,7 @@ public class Testmode {
         $("[data-test-id='login'] input").setValue(blockedUser.getLogin());
         $("[data-test-id='password'] input").setValue(blockedUser.getPassword());
         $$("button").find(exactText("Продолжить")).click();
-        $("[data-test-id='error-notification']").shouldHave(text("Неверно указан логин или пароль"));
+        $("[data-test-id='error-notification']").shouldHave(text("Пользователь заблакирован"));
     }
 
     @Test
